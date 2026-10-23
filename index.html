@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>URO-CARE – Urology & Andrology Center in Nairobi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-top: #3f4d68;
+    --bg-bottom: #2c3850;
+    --text: #ffffff;
+    --muted: rgba(255,255,255,0.86);
+    --accent: #a9d4f2;
+    --pill-bg: rgba(255,255,255,0.12);
+    --pill-border: rgba(255,255,255,0.28);
+    --pill-active: #ffffff;
+    --pill-active-text: #2c3850;
+    color-scheme: dark;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  /* The hero is a dark photo-overlay design on the live site, so it stays dark in both themes */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg-top: #36435c; --bg-bottom: #232d42; }
+  }
+  :root[data-theme="dark"] { --bg-top: #36435c; --bg-bottom: #232d42; }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+    color: var(--text);
+    font-family: "Outfit", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem clamp(1.25rem, 5vw, 4rem);
+  }
+  .brand {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+  }
+
+  .lang-toggle {
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-border);
+  }
+  .lang-toggle button {
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .lang-toggle button[aria-pressed="true"] {
+    background: var(--pill-active);
+    color: var(--pill-active-text);
+  }
+  .lang-toggle button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .hero {
+    max-width: 52rem;
+    padding: clamp(2rem, 8vh, 5rem) clamp(1.25rem, 5vw, 4rem) 4rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 0 0 1.25rem;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    font-size: clamp(2.75rem, 8vw, 5.75rem);
+    line-height: 1.02;
+    margin: 0 0 2rem;
+  }
+  h1 em {
+    color: var(--accent);
+    font-style: italic;
+  }
+  .lead {
+    color: var(--muted);
+    font-weight: 300;
+    font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    line-height: 1.7;
+    max-width: 36rem;
+    margin: 0;
+  }
+
+  [data-i18n] { transition: opacity 0.2s; }
+  body.switching [data-i18n] { opacity: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-i18n], .lang-toggle button { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">URO-CARE</div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="so" aria-pressed="false">Soomaali</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <p class="eyebrow" data-i18n="eyebrow">Welcome to URO-CARE</p>
+    <h1 data-i18n="title">Urology &amp; Andrology Center in <em>Nairobi</em></h1>
+    <p class="lead" data-i18n="lead">Comprehensive diagnosis and treatment for prostate enlargement, erectile dysfunction, infertility, kidney stones and urinary disorders for men, women and children.</p>
+  </main>
+
+<script>
+  const translations = {
+    en: {
+      eyebrow: "Welcome to URO-CARE",
+      title: "Urology &amp; Andrology Center in <em>Nairobi</em>",
+      lead: "Comprehensive diagnosis and treatment for prostate enlargement, erectile dysfunction, infertility, kidney stones and urinary disorders for men, women and children.",
+      pageTitle: "URO-CARE – Urology & Andrology Center in Nairobi"
+    },
+    so: {
+      eyebrow: "Ku soo dhawoow URO-CARE",
+      title: "Xarunta Cudurrada Kaadi-mareenka &amp; Caafimaadka Ragga ee <em>Nairobi</em>",
+      lead: "Baaritaan iyo daaweyn dhammaystiran oo loogu talagalay bararka qanjirka prostate-ka, kacsi la’aanta, dhalmo la’aanta, dhagxaanta kelyaha iyo cudurrada kaadi-mareenka ee ragga, haweenka iyo carruurta.",
+      pageTitle: "URO-CARE – Xarunta Kaadi-mareenka & Caafimaadka Ragga ee Nairobi"
+    }
+  };
+
+  const buttons = document.querySelectorAll(".lang-toggle button");
+
+  function applyLang(lang, animate) {
+    const t = translations[lang] || translations.en;
+    const update = () => {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.innerHTML = t[el.dataset.i18n];
+      });
+      document.documentElement.lang = lang;
+      document.title = t.pageTitle;
+      buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+      document.body.classList.remove("switching");
+    };
+    if (animate && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.body.classList.add("switching");
+      setTimeout(update, 200);
+    } else {
+      update();
+    }
+    try { localStorage.setItem("urocare-lang", lang); } catch (e) {}
+  }
+
+  buttons.forEach(b => b.addEventListener("click", () => applyLang(b.dataset.lang, true)));
+
+  let saved = null;
+  try { saved = localStorage.getItem("urocare-lang"); } catch (e) {}
+  if (saved && translations[saved]) applyLang(saved, false);
+</script>
+</body>
+</html>
