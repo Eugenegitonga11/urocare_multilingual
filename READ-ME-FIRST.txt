@@ -1,0 +1,35 @@
+URO-CARE website — Somali translation review
+=============================================
+
+Thank you for checking the Somali text.
+
+HOW TO OPEN
+1. Unzip this folder (keep the images in the same folder as the pages).
+2. Double-click index.html — this is the Somali homepage.
+   From there, use the menu to move between pages, just like the real website.
+   Being online lets the fonts and a few photos load.
+
+PAGES TO CHECK
+- index.html — Homepage, plus the top menu and footer (these appear on every
+  page). A pop-up about ESWL appears after a few seconds; please check it too.
+- urology-services.html — Services page (menu: Adeegyada). Click the unit tabs
+  (Burooyinka, Prostate-ka, ...) and the FAQ category buttons to see every card
+  and question; click each question to open its answer.
+- book-appointment.html — Booking page (button: Qabso Ballan). Fill in the form
+  with test details and click through all 3 steps to see every label, error
+  message, dropdown option and the summary. The last button opens WhatsApp —
+  you do not need to send the message.
+
+HOW TO SEND CORRECTIONS
+The easiest way: a screenshot of the wrong text with the correct Somali
+written next to it, or a message in the form:
+   Page / section:  ...
+   Current text:    ...
+   Correct text:    ...
+
+Medical terms in brackets (e.g. "BPH", "ESWL", "Penile Implant", "Nephrectomy")
+were kept in English on purpose because patients often know them that way.
+Please tell us if a Somali term would be clearer.
+
+Links to other pages (About, ESWL, Laboratory, Pharmacy, Blog) still open the
+English website — those pages will be translated next.
